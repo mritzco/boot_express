@@ -1,0 +1,26 @@
+{
+    "name": "boot_express",
+    "port": {
+      "development": 3002,
+      "testing": 7000,
+      "production": 80
+    },
+    "mysql": {
+        "development": {
+            "host": "localhost",
+            "user": "root",
+            "password": "root",
+            "database": "crypto",
+            "multipleStatements": true
+        }
+    },
+    "routes": [
+
+    ],
+    "static": [
+        {
+            "url": "/",
+            "dir": "test"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "boot_express",
+  "version": "1.0.0",
+  "description": "Bootstraps express ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run dev",
+    "lint": "jshint *.js lib/*.js lib/**/*.js --reporter=node_modules/jshint-stylish || true",
+    "dev": "nodemon"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules/*",
+      ".hg"
+    ],
+    "watch": [
+      "lib/*",
+      "*.js"
+    ],
+    "ext": "js json",
+    "exec": "npm run lint  && node test/test.js "
+  },
+  "keywords": [
+    "express",
+    "bootstrap",
+    "application"
+  ],
+  "author": "itzco",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "fs-extra": "^7.0.0",
+    "stack-trace": "0.0.10"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "helmet": "^3.13.0",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.3"
+  }
+}
