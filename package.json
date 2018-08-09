@@ -1,5 +1,5 @@
 {
-  "name": "boot_express",
+  "name": "boot-express",
   "version": "1.0.0",
   "description": "Bootstraps express ",
   "main": "index.js",
@@ -29,19 +29,20 @@
   "author": "itzco",
   "license": "ISC",
   "dependencies": {
-    "debug": "^3.1.0",
-    "fs-extra": "^7.0.0",
-    "stack-trace": "0.0.10"
-  },
-  "devDependencies": {
     "body-parser": "^1.18.3",
     "compression": "^1.7.3",
     "cors": "^2.8.4",
+    "debug-env": "^1.1.2",
     "express": "^4.16.3",
+    "express-pino-logger": "^3.0.2",
+    "fs-extra": "^7.0.0",
     "helmet": "^3.13.0",
+    "mysql": "^2.16.0",
+    "stack-trace": "0.0.10"
+  },
+  "devDependencies": {
     "jshint": "^2.9.5",
     "jshint-stylish": "^2.2.1",
-    "mysql": "^2.16.0",
     "nodemon": "^1.18.3"
   }
 }
