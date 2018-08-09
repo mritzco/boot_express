@@ -4,6 +4,8 @@
  */
 'use strict';
 
+const stackTrace = require('stack-trace'),
+    debug= require('debug-env')('boot:main');
 
 const boot_express = {
   config: require('./lib/configuration'),
@@ -15,5 +17,15 @@ const boot_express = {
   UTF8Urls: require('./lib/UTF8Urls'),
   error_handler: require('./lib/error_handler')
 };
+
+/**
+ * If node crashes, this will run
+ */
+process.on('uncaughtException', function(err) {
+  // handle the error safely
+  // console.log("[err]",err);
+  var last = stackTrace.get()[0];
+  debug.error('uncaughtException', err, last);
+});
 
 exports = module.exports = boot_express;
