@@ -25,7 +25,11 @@ process.on('uncaughtException', function(err) {
   // handle the error safely
   // console.log("[err]",err);
   var last = stackTrace.get()[0];
-  debug.error('uncaughtException', err, last);
+  if (debug.error.name === 'debug' || debug.error.name ==='pino') {
+      debug.error('uncaughtException', err, last);
+  } else {
+      console.log('uncaughtException', err, last);
+  }
 });
 
 exports = module.exports = boot_express;
