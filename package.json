@@ -38,6 +38,7 @@
     "fs-extra": "^7.0.0",
     "helmet": "^3.13.0",
     "mysql": "^2.16.0",
+    "rethinkdb": "^2.3.3",
     "stack-trace": "0.0.10"
   },
   "devDependencies": {
